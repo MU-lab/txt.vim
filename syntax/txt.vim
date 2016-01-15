@@ -29,28 +29,28 @@ syn match EPM "[~\-_+*<>\[\]{}=|#@$%&\\/:&\^\.,!?]"
 syn match Letters "[A-Za-z]"
 
 " Normal Chinese Punctuation Marks
-syn match CPM "[ï¼Œã€‚ï¼›ï¼šï¼ï¼Ÿã€ã€Šã€‹ã€ã€‘â€œâ€â€˜â€™ï¼ˆï¼‰ã€ã€ã€Œã€????ã€”ã€•ã€ˆã€‰â€¦ï¿¥ãƒ»â– â—†â–²â—â˜…â–¡â—‡â–³â—‹â˜†ï¼„â€°ï¿¥â„ƒâ€»Â±????????????????????????????????????????â‘ â‘¡â‘¢â‘£â‘¤â‘¥â‘¦â‘§â‘¨â‘©??????????â†’â†â†‘â†“Â§â„–â—â… â…¡â…¢â…£â…¤â…¥â…¦â…§â…¨â…©???â‰¡â‰ ï¼??ï¼œï¼???Â±ï¼‹ï¼Ã—Ã·ï¼âˆ«âˆ®âˆâˆâˆ§âˆ¨âˆ‘?âˆªâˆ©âˆˆâˆµâˆ´âŠ¥âˆ¥âˆ âŒ’??âˆ½âˆšÂ°?ï¿ ã€‡]"
+syn match CPM "[CBGFIHAstyzghefijwxuv????klqrcE¡Ÿ£œš ¢›™ñ¦}????????????????????????????????????????‡@‡A‡B‡C‡D‡E‡F‡G‡H‡I??????????¨©ª«˜‡‚‡T‡U‡V‡W‡X‡Y‡Z‡[‡\‡]???ß‚??ƒ„???}{|~€^ç‡“å‡ÈÉ‡”?¾¿¸æˆÛaÚÜ??äã‹?‘Z]"
 
-" æ•°å­—
+" ”š
 syn match Numbers "\d\(\.\d\+\)\?"
 syn match Numbers "\d"
 
 " internet address
 syn match Links   "\(http\|https\|ftp\)\(\w\|[\-&=,?\:\.\/]\)*"  contains=CPM
 
-" æ‹¬å¼§
-syn region Bracketed         matchgroup=CPM  start="[ï¼ˆ]"        end="[ï¼‰]"
+" Š‡ŒÊ
+syn region Bracketed         matchgroup=CPM  start="[i]"        end="[j]"
 syn region Quoted            matchgroup=EPM  start="\""          end="\""
-syn region Quoted            matchgroup=CPM  start="[ã€Š]"        end="[ã€‹]"
-syn region Quoted            matchgroup=CPM  start="[â€œ]"        end="[â€]"
-syn region Quoted            matchgroup=CPM  start="[ã€]"        end="[ã€]"
-syn region Quoted            matchgroup=CPM  start="[ã€]"        end="[ã€‘]"
+syn region Quoted            matchgroup=CPM  start="[s]"        end="[t]"
+syn region Quoted            matchgroup=CPM  start="[g]"        end="[h]"
+syn region Quoted            matchgroup=CPM  start="[w]"        end="[x]"
+syn region Quoted            matchgroup=CPM  start="[y]"        end="[z]"
 syn region Quoted            matchgroup=CPM  start="[?]"        end="[?]"
-syn region Quoted            matchgroup=CPM  start="[ã€”]"        end="[ã€•]"
+syn region Quoted            matchgroup=CPM  start="[k]"        end="[l]"
 syn region Quoted            matchgroup=EPM  start="\(\s\|^\)\@<='" end="'"
-syn region SingleQuoted      matchgroup=CPM  start="[ã€ˆ]"        end="[ã€‰]"
-syn region SingleQuoted      matchgroup=CPM  start="[ã€Œ]"        end="[ã€]"
-syn region SingleQuoted      matchgroup=CPM  start="[â€˜]"        end="[â€™]"
+syn region SingleQuoted      matchgroup=CPM  start="[q]"        end="[r]"
+syn region SingleQuoted      matchgroup=CPM  start="[u]"        end="[v]"
+syn region SingleQuoted      matchgroup=CPM  start="[e]"        end="[f]"
 syn region SingleQuoted      matchgroup=CPM  start="[?]"        end="[?]"
 syn region Comments          matchgroup=EPM  start="("           end=")"
 syn region Comments          matchgroup=Comments start="\/\/"    end="$"
