@@ -57,8 +57,8 @@ syn case match
   endif
 
   HiLink Numbers              Number
-  " HiLink CPM                  String
-  HiLink EPM                  Tag
+  HiLink CPM                  String
+  " HiLink EPM                  Tag
   HiLink EPM                  Operator
   HiLink Bracketed            Delimiter
   HiLink Quoted               Label
@@ -66,7 +66,7 @@ syn case match
   HiLink Comments             Comment
   HiLink Links                Underlined
   HiLink Tags                 Function
-  " HiLink Letters              Identifier
+  " HiLink Letters              String
   delcommand HiLink
 
   hi Errors                   ctermfg=red guifg=red
