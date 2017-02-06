@@ -28,14 +28,14 @@ syn match EPM "[~\-_+*<>\[\]{}=|#@$%&\\/:&\^\.,!?]"
 
 syn match Letters "[A-Za-z]"
 
-" ”š
+" æ•°å­—
 syn match Numbers "\d\(\.\d\+\)\?"
 syn match Numbers "\d"
 
 " internet address
 syn match Links   "\(http\|https\|ftp\)\(\w\|[\-&=,?\:\.\/]\)*"  contains=CPM
 
-" Š‡ŒÊ
+" æ‹¬å¼§
 syn region Quoted            matchgroup=EPM  start="\""          end="\""    contains=EPM
 syn region Quoted            matchgroup=EPM  start="\(\s\|^\)\@<='" end="'"    contains=EPM
 syn region Quoted            matchgroup=EPM  start="("           end=")"    contains=EPM
