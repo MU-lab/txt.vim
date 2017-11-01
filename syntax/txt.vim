@@ -33,8 +33,8 @@ syn match Links   "\(http\|https\|ftp\)\(\w\|[\-&=,?\:\.\/]\)*"  contains=CPM
 syn region Quoted            matchgroup=EPM  start="\""          end="\""    contains=EPM
 syn region Quoted            matchgroup=EPM  start="\(\s\|^\)\@<='" end="'"    contains=EPM
 syn region Quoted            matchgroup=EPM  start="("           end=")"    contains=EPM
-execute 'syn region Comments          matchgroup=Comments start="\/\*"    end="$"'
-execute 'syn region Comments          matchgroup=Comments start="^\*"    end="$"'
+syn region Comments          matchgroup=Comments start='\/\*'    end='$'
+syn region Comments          matchgroup=Comments start='^\*'    end='$'
 syn region Tags              matchgroup=EPM  start="<"           end=">"    contains=EPM
 syn region Tags              matchgroup=EPM  start="{"           end="}"    contains=EPM
 syn region Tags              matchgroup=EPM  start="\["          end="\]"    contains=EPM
