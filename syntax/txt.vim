@@ -1,4 +1,8 @@
 " Vim syntax file
+" Language:	PlainText
+" Maintainer:	name <name@domain>
+" URL:		http://your_url/
+" Last Update:  date time
 
 if !exists("main_syntax")
   if version < 600
@@ -30,14 +34,16 @@ syn match Numbers "\d"
 syn match Links   "\(http\|https\|ftp\)\(\w\|[\-&=,?\:\.\/]\)*"  contains=CPM
 
 " 括弧
-syn region Quoted            matchgroup=EPM  start="\""          end="\""    contains=EPM
-syn region Quoted            matchgroup=EPM  start="\(\s\|^\)\@<='" end="'"    contains=EPM
-syn region Quoted            matchgroup=EPM  start="("           end=")"    contains=EPM
-" syn region Comments          matchgroup=Comments start="\/\*"    end="$"
-" syn region Comments          matchgroup=Comments start="^\*"    end="$"
-syn region Tags              matchgroup=EPM  start="<"           end=">"    contains=EPM
-syn region Tags              matchgroup=EPM  start="{"           end="}"    contains=EPM
-syn region Tags              matchgroup=EPM  start="\["          end="\]"    contains=EPM
+syn region Quoted     matchgroup=EPM      start="\""             end="\""   contains=EPM
+syn region Quoted     matchgroup=EPM      start="'"              end="\('\|$\)"    contains=EPM
+" syn region Quoted     matchgroup=EPM      start="\(\s\|^\)\@<='" end="'"    contains=EPM
+syn region Comments   matchgroup=Comments start="\/\*"           end="$"
+syn region Comments   matchgroup=Comments start="^\*"            end="$"
+syn region Tags       matchgroup=EPM      start="("              end=")"    contains=EPM
+syn region Tags       matchgroup=EPM      start="<"              end=">"    contains=EPM
+syn region Tags       matchgroup=EPM      start="{"              end="}"    contains=EPM
+syn region Tags       matchgroup=EPM      start="\["             end="\]"   contains=EPM
+syn region Tags       matchgroup=EPM      start="\`"             end="\`"   contains=EPM
 
 syn keyword Errors error bug warning fatal rtfm
 
